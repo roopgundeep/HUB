@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/feed_bg" >
+
+    <ScrollView
+        android:id="@+id/card_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <!-- Button layout starts here -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/feed_item_padding_left_right"
+                android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+                <Button
+                    android:id="@+id/newsbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/rihanna"
+                    android:orientation="vertical"
+                    android:text="NEWS"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/dealsbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/rihanna"
+                    android:orientation="vertical"
+                    android:text="DEALS"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <!-- Button ends here -->
+
+
+            <!-- News more starts here -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/feed_item_padding_left_right"
+                android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+                <TextView
+                    android:id="@+id/NEWS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="Trending News"
+                    android:textSize="@dimen/feed_item_profile_name" >
+                </TextView>
+
+                <Button
+                    android:id="@+id/moreNewsButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:minHeight="0dp"
+                    android:text="more"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+            <!-- News More ends here -->
+
+
+            <!-- Starts here News -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/feed_item_padding_left_right"
+                android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="@dimen/feed_item_margin"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/bg_parent_rounded_corner_top"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/feed_item_padding_top_bottom" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="@dimen/feed_item_padding_left_right"
+                            android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+                            <com.example.drawernavigationtabs.FeedImageView
+                                android:id="@+id/newsFeedImage1"
+                                android:layout_width="@dimen/newsmain_pic"
+                                android:layout_height="@dimen/newsmain_pic"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/rihanna" >
+                            </com.example.drawernavigationtabs.FeedImageView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.65"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/feed_item_profile_info_padd" >
+
+                                <TextView
+                                    android:id="@+id/newsTitle1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="Title"
+                                    android:textSize="@dimen/feed_item_profile_name" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/newsSourcename1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="Source Name"
+                                    android:textSize="@dimen/feed_item_timestamp" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/newsDescription1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:text="Description"
+                                    android:textColor="@color/timestamp"
+                                    android:textSize="@dimen/feed_item_timestamp" >
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="5dp"
+                                    android:paddingTop="2dp" >
+
+                                    <com.example.drawernavigationtabs.NetworkImageView
+                                        android:id="@+id/news1friendPic1"
+                                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                        android:scaleType="fitCenter" >
+                                    </com.example.drawernavigationtabs.NetworkImageView>
+
+                                    <com.example.drawernavigationtabs.NetworkImageView
+                                        android:id="@+id/news1friendPic2"
+                                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                        android:scaleType="fitCenter" >
+                                    </com.example.drawernavigationtabs.NetworkImageView>
+
+                                    <com.example.drawernavigationtabs.NetworkImageView
+                                        android:id="@+id/news1friendPic3"
+                                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                        android:scaleType="fitCenter" >
+                                    </com.example.drawernavigationtabs.NetworkImageView>
+
+                                    <TextView
+                                        android:id="@+id/news1likedData"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:fontFamily="sans-serif-light"
+                                        android:maxHeight="@dimen/feed_item_fb_friends_pic"
+                                        android:textSize="@dimen/feed_item_timestamp" >
+                                    </TextView>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Ends here -->
+
+
+            <!-- Starts here News -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/feed_item_padding_left_right"
+                android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="@dimen/feed_item_margin"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/bg_parent_rounded_corner_top"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/feed_item_padding_top_bottom" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="@dimen/feed_item_padding_left_right"
+                            android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+                            <com.example.drawernavigationtabs.FeedImageView
+                                android:id="@+id/newsFeedImage2"
+                                android:layout_width="@dimen/newsmain_pic"
+                                android:layout_height="@dimen/newsmain_pic"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/rihanna" >
+                            </com.example.drawernavigationtabs.FeedImageView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.65"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/feed_item_profile_info_padd" >
+
+                                <TextView
+                                    android:id="@+id/newsTitle2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="Title"
+                                    android:textSize="@dimen/feed_item_profile_name" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/newsSourcename2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="Source Name"
+                                    android:textSize="@dimen/feed_item_timestamp" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/newsDescription2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:text="Description"
+                                    android:textColor="@color/timestamp"
+                                    android:textSize="@dimen/feed_item_timestamp" >
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="5dp"
+                                    android:paddingTop="2dp" >
+
+                                    <com.example.drawernavigationtabs.NetworkImageView
+                                        android:id="@+id/news2friendPic1"
+                                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                        android:scaleType="fitCenter" >
+                                    </com.example.drawernavigationtabs.NetworkImageView>
+
+                                    <com.example.drawernavigationtabs.NetworkImageView
+                                        android:id="@+id/news2friendPic2"
+                                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                        android:scaleType="fitCenter" >
+                                    </com.example.drawernavigationtabs.NetworkImageView>
+
+                                    <com.example.drawernavigationtabs.NetworkImageView
+                                        android:id="@+id/news2friendPic3"
+                                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                        android:scaleType="fitCenter" >
+                                    </com.example.drawernavigationtabs.NetworkImageView>
+
+                                    <TextView
+                                        android:id="@+id/news2likedData"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:fontFamily="sans-serif-light"
+                                        android:maxHeight="@dimen/feed_item_fb_friends_pic"
+                                        android:textSize="@dimen/feed_item_timestamp" >
+                                    </TextView>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Ends here -->
+
+
+            <!-- Deals More starts here -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/feed_item_padding_left_right"
+                android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+                <TextView
+                    android:id="@+id/DEALS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="Trending deals"
+                    android:textSize="@dimen/feed_item_profile_name" >
+                </TextView>
+
+                <Button
+                    android:id="@+id/moreDealButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:minHeight="0dp"
+                    android:text="more"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+            <!-- Deals More ends here -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/feed_item_padding_left_right"
+                android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+                <!-- Starts here -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_parent_rounded_corner_top"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="@dimen/feed_item_margin"
+                        android:background="@drawable/bg_parent_rounded_corner_top"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/selectedLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/bg_parent_rounded_corner_top"
+                            android:orientation="vertical" >
+
+                            <!-- the main image -->
+
+                            <com.example.drawernavigationtabs.FeedImageView
+                                android:id="@+id/dealsFeedImage1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="150dp"
+                                android:background="@color/white"
+                                android:padding="6dp"
+                                android:requiresFadingEdge="vertical"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/rihanna"
+                                android:visibility="visible" >
+                            </com.example.drawernavigationtabs.FeedImageView>
+
+                            <TextView
+                                android:id="@+id/dealsTitle1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:linksClickable="true"
+                                android:maxLines="1"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                                android:paddingTop="2dp"
+                                android:text="TITLE"
+                                android:textSize="12sp" >
+                            </TextView>
+                            <!-- the description layout -->
+
+                            <TextView
+                                android:id="@+id/dealsDescription1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:maxLines="2"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                                android:text="description"
+                                android:textColor="@color/timestamp"
+                                android:textSize="10sp" >
+                            </TextView>
+                        </LinearLayout>
+                        <!-- the fb friends layout -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:orientation="horizontal"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="@dimen/feed_item_padding_left_right"
+                            android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+                            <com.example.drawernavigationtabs.NetworkImageView
+                                android:id="@+id/deals1friendPic1"
+                                android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                android:scaleType="fitCenter" >
+                            </com.example.drawernavigationtabs.NetworkImageView>
+
+                            <com.example.drawernavigationtabs.NetworkImageView
+                                android:id="@+id/deals1friendPic2"
+                                android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                android:scaleType="fitCenter" >
+                            </com.example.drawernavigationtabs.NetworkImageView>
+
+                            <com.example.drawernavigationtabs.NetworkImageView
+                                android:id="@+id/deals1friendPic3"
+                                android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                android:scaleType="fitCenter" >
+                            </com.example.drawernavigationtabs.NetworkImageView>
+
+                            <TextView
+                                android:id="@+id/deals1likedData"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:fontFamily="sans-serif-light"
+                                android:maxHeight="@dimen/feed_item_fb_friends_pic"
+                                android:textSize="@dimen/feed_item_timestamp" >
+                            </TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Ends here -->
+
+
+                <!-- Starts here -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_parent_rounded_corner_top"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="@dimen/feed_item_margin"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/selectedLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@color/feed_item_bg"
+                            android:orientation="vertical" >
+
+                            <!-- the main image -->
+
+                           <com.example.drawernavigationtabs.FeedImageView
+                                android:id="@+id/dealsFeedImage2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="150dp"
+                                android:background="@color/white"
+                                android:padding="6dp"
+                                android:requiresFadingEdge="vertical"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/rihanna"
+                                android:visibility="visible" >
+                            </com.example.drawernavigationtabs.FeedImageView>
+
+                            <TextView
+                                android:id="@+id/dealsTitle2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:linksClickable="true"
+                                android:maxLines="1"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                                android:paddingTop="2dp"
+                                android:text="TITLE"
+                                android:textSize="12sp" >
+                            </TextView>
+                            <!-- the description layout -->
+
+                            <TextView
+                                android:id="@+id/dealsDescription2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:maxLines="2"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                                android:text="description"
+                                android:textColor="@color/timestamp"
+                                android:textSize="10sp" >
+                            </TextView>
+                        </LinearLayout>
+                        <!-- the fb friends layout -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:orientation="horizontal"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="@dimen/feed_item_padding_left_right"
+                            android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+                            <com.example.drawernavigationtabs.NetworkImageView
+                                android:id="@+id/deals2friendPic1"
+                                android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                android:scaleType="fitCenter" >
+                            </com.example.drawernavigationtabs.NetworkImageView>
+
+                            <com.example.drawernavigationtabs.NetworkImageView
+                                android:id="@+id/deals2friendPic2"
+                                android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                android:scaleType="fitCenter" >
+                            </com.example.drawernavigationtabs.NetworkImageView>
+
+                            <com.example.drawernavigationtabs.NetworkImageView
+                                android:id="@+id/deals2friendPic3"
+                                android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                android:scaleType="fitCenter" >
+                            </com.example.drawernavigationtabs.NetworkImageView>
+
+                            <TextView
+                                android:id="@+id/deals2likedData"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:fontFamily="sans-serif-light"
+                                android:maxHeight="@dimen/feed_item_fb_friends_pic"
+                                android:textSize="@dimen/feed_item_timestamp" >
+                            </TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Ends here -->
+            </LinearLayout>
+
+            <!-- Empty view -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

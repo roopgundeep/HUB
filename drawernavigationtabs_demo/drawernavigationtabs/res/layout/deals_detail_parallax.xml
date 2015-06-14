@@ -1,0 +1,846 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/image_view_container_RL"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/detail_pageimage_height" >
+
+        <LinearLayout
+            android:id="@+id/image_view_container_LL"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/detail_pageimage_height"
+            android:layout_alignParentTop="true" >
+
+            <com.example.drawernavigationtabs.FeedImageView
+                android:id="@+id/feedImage1"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/detail_pageimage_height" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/feed_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:alpha="0.65"
+            android:background="#212121"
+            android:fontFamily="sans-serif-light"
+            android:padding="4dp"
+            android:text="category"
+            android:textColor="#FFF"
+            android:textSize="16sp" >
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/image_view_container_bottom_overlay_RL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.65"
+            android:background="@drawable/background_gradient"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sourcePic"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingBottom="2dp"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:paddingTop="2dp"
+                android:text="Title Comes here"
+                android:textColor="@color/detail_page_title"
+                android:textSize="24sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <!--
+            <TextView
+                android:id="@+id/timestamp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:paddingLeft="10dp"
+                android:text="this is timestamp text"
+                android:textColor="@color/detail_page_title"
+                android:textSize="14sp" >               
+            </TextView>
+            -->
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <uk.co.chrisjenx.paralloid.views.ParallaxScrollView
+        android:id="@+id/description_view_PSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="50dp"
+            android:paddingTop="@dimen/detail_pageimage_height" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/fblayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="2dp" >
+
+                    <com.example.drawernavigationtabs.NetworkImageView
+                        android:id="@+id/friendPic1"
+                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitCenter" >
+                    </com.example.drawernavigationtabs.NetworkImageView>
+
+                    <com.example.drawernavigationtabs.NetworkImageView
+                        android:id="@+id/friendPic2"
+                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitCenter" >
+                    </com.example.drawernavigationtabs.NetworkImageView>
+
+                    <com.example.drawernavigationtabs.NetworkImageView
+                        android:id="@+id/friendPic3"
+                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitCenter" >
+                    </com.example.drawernavigationtabs.NetworkImageView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tag_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fblayout"
+                    android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                    android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                    android:background="@drawable/border_deal_detail"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="2dp" >
+
+                    <TextView
+                        android:id="@+id/tagKnowns"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                        android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Known for : "
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tags"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Lassi | Chawal | kadhi"
+                        android:textColor="@color/timestamp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/address_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tag_layout"
+                    android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                    android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                    android:background="@drawable/border_deal_detail"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="2dp" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/house_detail" />
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                        android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Address comes here"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/phone_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address_layout"
+                    android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                    android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                    android:background="@drawable/border_deal_detail"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="2dp" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/phone_detail" />
+
+                    <TextView
+                        android:id="@+id/phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                        android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="8886545523"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/drive_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phone_layout"
+                    android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                    android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                    android:background="@drawable/border_deal_detail"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="2dp" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/car_detail" />
+
+                    <TextView
+                        android:id="@+id/drive_dist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                        android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="30 min away"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/offer_layout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/drive_layout"
+                    android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                    android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                    android:background="@drawable/border_deal_detail"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="2dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/link1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/offer_upper_layout1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <com.example.drawernavigationtabs.NetworkImageViewSquare
+                            android:id="@+id/offer_image1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <TextView
+                            android:id="@+id/offer_title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                            android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingTop="5dp"
+                            android:text="Title Comes Here"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/offer_below_layout1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3" >
+
+                        <TextView
+                            android:id="@+id/saving1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Amount from 540"
+                            android:textColor="@color/timestamp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/discount1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Discount 40%"
+                            android:textColor="@color/timestamp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/count1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Count: 234"
+                            android:textColor="@color/timestamp"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/offer_layout2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/offer_layout1"
+                    android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                    android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                    android:background="@drawable/border_deal_detail"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="2dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/link2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/offer_upper_layout2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <com.example.drawernavigationtabs.NetworkImageViewSquare
+                            android:id="@+id/offer_image2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <TextView
+                            android:id="@+id/offer_title2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                            android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingTop="5dp"
+                            android:text="Title Comes Here"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/offer_below_layout2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3" >
+
+                        <TextView
+                            android:id="@+id/saving2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Amount from 540"
+                            android:textColor="@color/timestamp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/discount2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Discount 40%"
+                            android:textColor="@color/timestamp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/count2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Count: 234"
+                            android:textColor="@color/timestamp"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/offer_layout3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/offer_layout2"
+                    android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                    android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                    android:background="@drawable/border_deal_detail"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="2dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/link3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/offer_upper_layout3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <com.example.drawernavigationtabs.NetworkImageViewSquare
+                            android:id="@+id/offer_image3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <TextView
+                            android:id="@+id/offer_title3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                            android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingTop="5dp"
+                            android:text="Title Comes Here"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/offer_below_layout3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3" >
+
+                        <TextView
+                            android:id="@+id/saving3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Amount from 540"
+                            android:textColor="@color/timestamp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/discount3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Discount 40%"
+                            android:textColor="@color/timestamp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/count3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Count: 234"
+                            android:textColor="@color/timestamp"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/recommendation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/relativeLayout1"
+                android:background="@color/feed_bg"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/rec_layout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                    android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                    android:background="@drawable/border"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/rec_data1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <!--
+                         <TextView
+                        android:id="@+id/rec_type1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                    -->
+
+                    <LinearLayout
+                        android:id="@+id/rec_imageLayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal" >
+
+                        <com.example.drawernavigationtabs.NetworkImageViewSquare
+                            android:id="@+id/rec_image1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/rec_imageLayout1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <TextView
+                            android:id="@+id/rec_title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-light"
+                            android:maxLines="2"
+                            android:text="Title Comes Here jhsfdj jhdjfh jhdjhfjdf sdjfh djfhskd k"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/rec_time1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:text="Timestamp"
+                            android:textColor="@color/timestamp"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/rec_type1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:alpha="0.65"
+                            android:background="#212121"
+                            android:fontFamily="sans-serif-light"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="1dp"
+                            android:text="category"
+                            android:textColor="#FFF"
+                            android:textSize="13sp" >
+                        </TextView>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rec_layout2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                    android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/rec_data2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <!--
+                         <TextView
+                        android:id="@+id/rec_type2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                    -->
+
+                    <LinearLayout
+                        android:id="@+id/rec_imageLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal" >
+
+                        <com.example.drawernavigationtabs.NetworkImageViewSquare
+                            android:id="@+id/rec_image2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/rec_imageLayout2"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <TextView
+                            android:id="@+id/rec_title2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-light"
+                            android:maxLines="2"
+                            android:text="Title Comes Here jhsfdj jhdjfh jhdjhfjdf sdjfh djfhskd k"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/rec_time2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:text="Timestamp"
+                            android:textColor="@color/timestamp"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/rec_type2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:alpha="0.65"
+                            android:background="#212121"
+                            android:fontFamily="sans-serif-light"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="1dp"
+                            android:text="category"
+                            android:textColor="#FFF"
+                            android:textSize="13sp" >
+                        </TextView>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rec_layout3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                    android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/rec_data3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <!--
+                         <TextView
+                        android:id="@+id/rec_type3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                    -->
+
+                    <LinearLayout
+                        android:id="@+id/rec_imageLayout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal" >
+
+                        <com.example.drawernavigationtabs.NetworkImageViewSquare
+                            android:id="@+id/rec_image3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/rec_imageLayout3"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <TextView
+                            android:id="@+id/rec_title3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-light"
+                            android:maxLines="2"
+                            android:text="Title Comes Here "
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/rec_time3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:text="Timestamp"
+                            android:textColor="@color/timestamp"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/rec_type3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:alpha="0.65"
+                            android:background="#212121"
+                            android:fontFamily="sans-serif-light"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="1dp"
+                            android:text="category"
+                            android:textColor="#FFF"
+                            android:textSize="13sp" >
+                        </TextView>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Replace thiese linear layouts with the description layout -->
+    </uk.co.chrisjenx.paralloid.views.ParallaxScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/detail_button_deals"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/readMore"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Book"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/link_url"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Read More"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="gone" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:progressDrawable="@drawable/progress"
+        android:visibility="gone" >
+    </ProgressBar>
+
+</FrameLayout>

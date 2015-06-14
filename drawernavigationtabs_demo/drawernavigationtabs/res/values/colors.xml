@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="category_back">#56575A</color>
+    <!-- <color name="feed_bg">#d3d6db</color> -->
+    <color name="feed_bg">#eeeeee</color>
+ <!-- earlier used #a5adb0 -->
+    <color name="feed_item_bg">#ffffff</color>
+    <color name="feed_item_border">#e0e0e0</color>
+ <!-- earlier used c2c3c8 -->
+    <color name="link">#0a80d1</color>
+    <color name="timestamp">#a0a3a7</color>
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#992416</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="actionbar_text_color">#BDBDBD</color>
+    <color name="line">#33b5e5</color>
+    
+    <color name="category">#33b5e5</color>    
+    <color name="subcategory">#FF6666</color>
+    <color name="subcategory_selected">#33CC33</color>
+    <color name="red_inner">#e84e40</color>
+    <color name="red_outer">#e51c23</color>
+    <color name="blue_inner">#91a7ff</color>
+    <color name="blue_outer">#5677fc</color>
+    <color name="green_inner">#42bd41</color>
+    <color name="green_outer">#259b24</color>
+    <color name="subcategory_inner">#eceff1</color>
+    
+    <color name="gradient_start">#F000</color>
+    <color name="gradient_end">#0000</color>
+    
+    <color name="detail_page_title">#ffffff</color>
+    
+    <color name="action_bar_home_line">#263238</color><!-- 3A4A4A -->
+    <color name="action_bar_home_background">#37474f</color><!-- 243636 -->
+    
+    <color name="action_bar_news_line">#5677fc</color>
+    <color name="action_bar_news_background">#5677fc</color>
+	
+    <color name="action_bar_events_line">#E57368</color><!-- E57368 -->
+    <color name="action_bar_events_background">#DC4437</color><!-- DC4437 -->
+    
+    <color name="action_bar_deals_line">#8bc34a</color>
+    <color name="action_bar_deals_background">#8bc34a</color>
+
+	<color name="home_button_news_light">#738ffe</color>
+    <color name="home_button_news_dark">#5677fc</color>
+    
+	<color name="home_button_deals_light">#9ccc65</color>
+    <color name="home_button_deals_dark">#8bc34a</color>
+    
+    <color name="home_button_events_light">#DC4437</color>
+    <color name="home_button_events_dark">#e72e34</color><!-- e51c23 -->
+    
+     <color name="drawer_background">#cfd8dc</color>
+     <color name="drawer_background_line">#90a4ae</color>
+     
+      <color name="detail_button_news">#91a7ff</color>
+       <color name="detail_button_deals">#aed581</color>
+       
+</resources>

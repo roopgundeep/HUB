@@ -1,0 +1,52 @@
+<!--
+     Copyright (C) 2013 Foursquare Labs, Inc
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!-- #e8e3dc -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/walkthrough4"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="@string/connected_to_foursquare"
+        android:textColor="#222"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/FourSquareText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="Help us learn your taste better"
+        android:textColor="#ffffffff"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/connect_to_foursquare_blue" />
+
+</RelativeLayout>

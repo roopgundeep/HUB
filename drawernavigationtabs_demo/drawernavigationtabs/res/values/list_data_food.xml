@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="food_categories">   
+        <item>Specials</item>
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Coffee</item>
+        <item>Dinner</item>
+        <item>Dessert</item>
+        <item>Nightlife</item>
+        <item>Shopping</item>
+        <item>Fun</item>
+    </string-array>
+</resources>

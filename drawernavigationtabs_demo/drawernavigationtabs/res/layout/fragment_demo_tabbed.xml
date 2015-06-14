@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/demoPagerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/walkthrough1"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/walkthrough2"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/walkthrough3"
+        android:visibility="gone" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/demoPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NewsTabbedFragment" >
+
+        <!--
+    This title strip will display the currently visible page title, as well as the page
+    titles for adjacent pages.
+        -->
+
+        <android.support.v4.view.PagerTitleStrip
+            android:id="@+id/pager_title_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="#33b5e5"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textColor="#fff"
+            android:visibility="gone" />
+    </android.support.v4.view.ViewPager>
+
+    <Button
+        android:id="@+id/signUP"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.70"
+        android:background="#3b5998"
+        android:gravity="center"
+        android:textColor="#ffffffff"
+        android:paddingLeft="15dp"  
+        android:paddingRight="15dp"    
+        android:drawableLeft="@drawable/com_facebook_inverse_icon"        
+        android:text="Log in with Facebook" />
+
+    <LinearLayout
+        android:id="@+id/selector"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/signUP"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp" >
+
+        <ImageView
+            android:id="@+id/circle1"
+            android:layout_width="@dimen/circle"
+            android:layout_height="@dimen/circle"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="7dp"
+            android:alpha="1"
+            android:background="@drawable/black"
+            android:scaleType="fitCenter" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/circle2"
+            android:layout_width="@dimen/circle"
+            android:layout_height="@dimen/circle"
+            android:layout_gravity="bottom"
+             android:layout_marginRight="7dp"
+             android:alpha="0.5"
+            android:background="@drawable/grey"
+            android:scaleType="fitCenter" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/circle3"
+            android:layout_width="@dimen/circle"
+            android:layout_height="@dimen/circle"
+            android:alpha="0.5"
+            android:layout_gravity="bottom"
+            android:background="@drawable/grey"
+            android:scaleType="fitCenter" >
+        </ImageView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="40dp"
+        android:progressDrawable="@drawable/progress"
+        android:visibility="gone" >
+    </ProgressBar>
+
+</RelativeLayout>

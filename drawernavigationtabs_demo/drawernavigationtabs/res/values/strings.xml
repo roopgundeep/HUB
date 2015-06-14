@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hub</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="app_id">375851572539374</string>
+
+    <string-array name="drawer_titles">
+        <item>Tabs</item>
+        <item>WebView</item>
+    </string-array>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_section1">Highlights</string>
+    <string name="title_section2">NEWS</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_section4">Section 4</string>
+    <string name="title_section5">Section 5</string>
+    <string name="image_desc">Image View</string>
+    <string name="menu_name">Menu Name</string>
+    <string name="description">Description of the item dkfnk kjhe hejtrhrejt rjhtjrhtjrhtjhrt rjthjrhthrjhrjthjrhtjhrjthrjhtjtjhrt hrjhtjr tjh rtjhrjt jhrjth rjthj</string>
+    <string name="price">Price</string>
+    <string name="news">news</string>
+    <string name="events">events</string>
+    <string name="deals">deal</string>
+    <string name="xlistview_header_hint_normal">Pull-down refresh</string>
+    <string name="xlistview_header_hint_ready">Loosen the Refresh Data</string>
+    <string name="xlistview_header_hint_loading">Loading...</string>
+    <string name="xlistview_header_last_time">Last updated：</string>
+    <string name="xlistview_footer_hint_normal">See More</string>
+    <string name="xlistview_footer_hint_ready">Loosen Loading more</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>Interests</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_people</item>
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="selected">Selected</string>
+
+    <!-- Interest category -->
+    <string name="category1">Business</string>
+    <string name="subcategory11">Startups</string>
+    <string name="subcategory12">Finance</string>
+    <string name="subcategory13">Entrepreneurship</string>
+    <string name="subcategory14">Market</string>
+    <string name="category2">Science</string>
+    <string name="category3">Technology</string>
+    <string name="category4">Sports</string>
+    <string name="subcategory41">Cricket</string>
+    <string name="subcategory42">Football</string>
+    <string name="subcategory43">Golf</string>
+    <string name="subcategory44">Soccer</string>
+    <string name="subcategory45">American Football</string>
+    <string name="subcategory46">Baseball</string>
+    <string name="subcategory47">Basketball</string>
+    <string name="subcategory48">Ice Hockey</string>
+    <string name="subcategory49">College Sports</string>
+    <string name="subcategory410">High School Sports</string>
+    <string name="category5">Food</string>
+    <string name="category6">Entertainment</string>
+    <string name="category7">Auto</string>
+    <string name="subcategory71">Bike</string>
+    <string name="subcategory72">Cars</string>
+    <string name="category8">Arts and Photography</string>
+    <string name="category9">Lifestyle</string>
+    <string name="subcategory91">Books</string>
+    <string name="subcategory92">Fashion</string>
+    <string name="subcategory93">Health</string>
+    <string name="subcategory94">Travel</string>
+    <string name="subcategory95">Food And Drinks</string>
+    <string name="connected_to_foursquare">Hey looks like you’re connected to Foursquare!</string>
+    <string name="app_not_installed_message">To do this, you’ll need the latest version of Foursquare installed.</string>
+
+    <string-array name="type_array">        
+        <item> 1 </item>
+        <item> 2 </item>
+        <item> 3 </item>
+        <item> 4 </item>
+        <item> 5 </item>
+        <item> 6 </item>
+    </string-array>
+
+</resources>

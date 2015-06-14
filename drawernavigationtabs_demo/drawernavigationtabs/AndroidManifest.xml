@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.drawernavigationtabs"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	
+    <application
+        android:name="com.example.drawernavigationtabs.app.AppController"
+        android:allowBackup="true"
+        android:homeAsUpIndicator="@drawable/rihanna"
+        android:icon="@drawable/ic_launcher_out"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"  >
+        <activity
+            android:name="com.example.drawernavigationtabs.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.drawernavigationtabs.NewsDetail" />
+        <activity android:name="com.example.drawernavigationtabs.Register" />
+        <activity android:name="com.example.drawernavigationtabs.FacebookShare" />
+        <activity android:name="com.example.drawernavigationtabs.detailpage.DemoDetailPageNews" />
+        <activity android:name="com.example.drawernavigationtabs.detailpage.DemoDetailPageDeals" />
+         <activity android:name="com.example.drawernavigationtabs.SearchDealsfeed" />
+         
+         <activity android:name="com.example.drawernavigationtabs.Interests" />
+         <activity android:name="com.example.drawernavigationtabs.detailpage.DemoDetailPageEvents" />
+         <activity android:name="com.example.drawernavigationtabs.FriendsList" />
+         <activity android:name="com.example.drawernavigationtabs.WebviewActivity" />
+          <activity android:name="com.example.drawernavigationtabs.Interests_Home" />
+        <activity
+            android:name="com.example.drawernavigationtabs.DemoTabbedFragmentActivity"          
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
+             >
+        </activity>
+        <activity android:name="com.example.drawernavigationtabs.foursquare.FoursquareLogin"
+             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
+            </activity>
+		 <activity
+            android:name="com.foursquare.android.nativeoauth.TokenExchangeActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+    </application>
+
+</manifest>

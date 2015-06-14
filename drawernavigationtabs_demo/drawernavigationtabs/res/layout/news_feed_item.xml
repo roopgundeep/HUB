@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/feed_bg"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/feed_item_padding_left_right"
+    android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/feed_item_margin"
+        android:orientation="vertical" >
+
+        <!-- This is the onclick listener for the center layout -->
+
+        <LinearLayout
+            android:id="@+id/selectedLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/feed_item_bg"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/DummysourceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/feed_item_profile_name"
+                android:visibility="gone" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/Dummytimestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/timestamp"
+                android:textSize="@dimen/feed_item_timestamp"
+                android:visibility="gone" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/suggestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/sourceImageLink"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/mainImageLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:visibility="gone" />
+
+            <!-- the main image -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <com.example.drawernavigationtabs.FeedImageView
+                        android:id="@+id/feedImage1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@color/white"
+                        android:maxHeight="300dp"
+                        android:scaleType="fitXY"
+                        android:visibility="visible" >
+                    </com.example.drawernavigationtabs.FeedImageView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/feed_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0.65"
+                    android:background="@color/category_back"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="4dp"
+                    android:text="category"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" >
+                </TextView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:linksClickable="true"
+                android:maxLines="3"
+                android:paddingBottom="2dp"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:paddingTop="2dp"
+                android:textSize="20sp" >
+            </TextView>
+            <!-- the description layout -->
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="4"
+                android:paddingBottom="2dp"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:textColor="@color/timestamp"
+                android:textSize="15sp"
+                android:visibility="gone" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:paddingBottom="6dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/feed_item_padding_left_right"
+                android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+                <com.example.drawernavigationtabs.NetworkImageViewSquare
+                    android:id="@+id/profilePic"
+                    android:layout_width="@dimen/feed_item_profile_pic"
+                    android:layout_height="@dimen/feed_item_profile_pic"
+                    android:scaleType="fitCenter" >
+                </com.example.drawernavigationtabs.NetworkImageViewSquare>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/feed_item_profile_info_padd" >
+
+                    <TextView
+                        android:id="@+id/sourceName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="@dimen/feed_item_profile_name" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/timestamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/timestamp"
+                        android:textSize="@dimen/feed_item_timestamp" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal" >
+
+                    <com.example.drawernavigationtabs.NetworkImageView
+                        android:id="@+id/friendPic1"
+                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                        android:gravity="right"
+                        android:visibility="gone"
+                        android:scaleType="fitCenter" >
+                    </com.example.drawernavigationtabs.NetworkImageView>
+
+                    <com.example.drawernavigationtabs.NetworkImageView
+                        android:id="@+id/friendPic2"
+                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                        android:gravity="right"
+                        android:visibility="gone"
+                        android:scaleType="fitCenter" >
+                    </com.example.drawernavigationtabs.NetworkImageView>
+
+                    <com.example.drawernavigationtabs.NetworkImageView
+                        android:id="@+id/friendPic3"
+                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                        android:gravity="right"
+                        android:visibility="gone"
+                        android:scaleType="fitCenter" >
+                    </com.example.drawernavigationtabs.NetworkImageView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/friendPiclink1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:text="null"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/friendPiclink2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:text="null"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/friendPiclink3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:text="null"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:text="null"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

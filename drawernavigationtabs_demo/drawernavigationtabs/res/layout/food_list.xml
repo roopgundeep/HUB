@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"    
+    android:orientation="horizontal"
+    android:background="@color/white"
+     >
+	
+    <TextView
+        android:id="@+id/food_item"
+        android:layout_width="fill_parent"
+        android:background="@drawable/food_list_border"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/feed_item_padding_left_right"
+    	android:layout_marginRight="@dimen/feed_item_padding_left_right"
+    	android:paddingLeft="@dimen/feed_item_padding_left_right"
+    	android:paddingRight="@dimen/feed_item_padding_left_right"
+    	android:paddingTop="8dp"
+    	android:paddingBottom="8dp"            
+        android:orientation="vertical"
+        android:text="NEWS"
+        android:textSize="20sp" />
+
+  
+
+</LinearLayout>

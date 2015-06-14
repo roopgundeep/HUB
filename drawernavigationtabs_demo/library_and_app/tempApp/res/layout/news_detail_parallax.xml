@@ -1,0 +1,233 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/image_view_container_RL"
+        android:layout_width="fill_parent"
+        android:layout_height="192dp" >
+
+        <RelativeLayout
+            android:id="@+id/image_view_container_top_overlay_LL"
+            android:layout_width="fill_parent"
+            android:layout_height="96dp"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/top_image_but_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/abc_ic_voice_search" />
+
+            <ImageButton
+                android:id="@+id/top_image_but_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/abc_ic_voice_search" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/image_view_container_LL"
+            android:layout_width="fill_parent"
+            android:layout_height="192dp"
+            android:layout_alignParentTop="true" >
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:src="@drawable/ic_launcher" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/image_view_container_bottom_overlay_RL"
+            android:layout_width="fill_parent"
+            android:layout_height="96dp"
+            android:layout_below="@+id/image_view_container_top_overlay_LL" >
+
+            <ImageButton
+                android:id="@+id/bottom_image_but_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/abc_ic_voice_search" />
+
+            <ImageButton
+                android:id="@+id/bottom_image_but_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/abc_ic_voice_search" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <uk.co.chrisjenx.paralloid.views.ParallaxScrollView
+        android:id="@+id/description_view_PSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="192dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="LALALA" />
+        </LinearLayout>
+        <!-- 
+        Replace thiese linear layouts with the description layout
+         -->
+    </uk.co.chrisjenx.paralloid.views.ParallaxScrollView>
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="30dp">
+	    <ImageButton
+                android:id="@+id/_image_but_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/abc_ic_voice_search" />
+
+            <ImageButton
+                android:id="@+id/_image_but_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/abc_ic_voice_search" />
+	</LinearLayout>
+</FrameLayout>

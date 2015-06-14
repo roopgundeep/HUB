@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">6dp</dimen>
+    <dimen name="activity_vertical_margin">40dp</dimen>
+  	<dimen name="activity_vertical_below_margin">6dp</dimen>
+	<dimen name="width">100dp</dimen>
+	<dimen name="height">100dp</dimen>
+    
+    
+    <dimen name="feed_item_margin">10dp</dimen>
+    <dimen name="feed_item_padding_top_bottom">10dp</dimen>
+    <dimen name="feed_item_padding_left_right">10dp</dimen>
+    <dimen name="feed_item_profile_pic">40dp</dimen>
+     <dimen name="feed_item_fb_friends_pic">30dp</dimen>
+    <dimen name="feed_item_profile_info_padd">10dp</dimen>
+    <dimen name="feed_item_profile_name">15dp</dimen>
+    <dimen name="feed_item_timestamp">10dp</dimen>
+    <dimen name="feed_item_status_pad_left_right">10dp</dimen>
+    <dimen name="feed_item_status_pad_top">13dp</dimen>
+    <dimen name="feed_item_corner_radius">4dp</dimen>
+    <dimen name="feed_item_border_width">2dp</dimen>
+    
+    <dimen name="newsmain_pic">150dp</dimen>
+    
+    <!-- Interest layout -->
+     <dimen name="interest_padding">12dp</dimen>
+     <dimen name="interest_textsize">14dp</dimen>
+     
+     <dimen name="deals_pic">150dp</dimen>
+     <dimen name="dash_gap">2dp</dimen>
+     <dimen name="dash_width">3dp</dimen>
+    	
+     <dimen name="detail_pageimage_height">200dp</dimen>
+     <dimen name="main_page_category_label">200dp</dimen>
+     <dimen name="category_more_item_size">12sp</dimen>
+     
+     <dimen name="circle">10dp</dimen>
+</resources>

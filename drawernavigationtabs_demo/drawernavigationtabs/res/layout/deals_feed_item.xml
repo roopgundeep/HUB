@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/feed_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/feed_bg"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/feed_item_padding_left_right"
+        android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/feed_item_margin"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/feed_item_padding_top_bottom" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="@dimen/feed_item_padding_left_right"
+                            android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.50"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <com.example.drawernavigationtabs.FeedImageView
+                                        android:id="@+id/dealsFeedImage"
+                                        android:layout_width="@dimen/deals_pic"
+                                        android:layout_height="@dimen/deals_pic"
+                                        android:scaleType="fitCenter" >
+                                    </com.example.drawernavigationtabs.FeedImageView>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/distance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginTop="10dp"
+                                    android:alpha="0.65"
+                                    android:background="@color/category_back"
+                                    android:fontFamily="sans-serif-light"
+                                    android:paddingBottom="4dp"
+                                    android:paddingLeft="8dp"
+                                    android:paddingRight="8dp"
+                                    android:paddingTop="4dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" >
+                                </TextView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/deals_pic"
+                                android:layout_weight="0.50"
+                                android:orientation="vertical"
+                                android:paddingLeft="1dp" >
+
+                                <!-- android:paddingLeft="@dimen/feed_item_profile_info_padd" -->
+
+                                <TextView
+                                    android:id="@+id/VenueName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif-light"
+                                    android:maxLines="2"
+                                    android:text="Title"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/feed_category"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/VenueName"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif-light"
+                                    android:maxLines="1"
+                                    android:paddingTop="2dp"
+                                    android:text="10 km far"
+                                    android:textSize="12sp" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/phrases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/feed_category"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif-light"
+                                    android:maxLines="1"
+                                    android:paddingTop="2dp"
+                                    android:text="10 km far"
+                                    android:textColor="@color/timestamp"
+                                    android:textSize="12sp" >
+                                </TextView>
+
+                                <RatingBar
+                                    android:id="@+id/rating"
+                                    style="?android:attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/phrases"
+                                    android:isIndicator="true"
+                                    android:numStars="5"
+                                    android:paddingTop="2dp"
+                                    android:progressDrawable="@drawable/ratingbar_red"
+                                    android:stepSize="0.1" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_below="@id/rating"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="5dp"
+                                    android:paddingTop="2dp" >
+
+                                    <com.example.drawernavigationtabs.NetworkImageView
+                                        android:id="@+id/friendPic1"
+                                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                        android:layout_gravity="bottom"
+                                        android:scaleType="fitCenter" >
+                                    </com.example.drawernavigationtabs.NetworkImageView>
+
+                                    <com.example.drawernavigationtabs.NetworkImageView
+                                        android:id="@+id/friendPic2"
+                                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                        android:layout_gravity="bottom"
+                                        android:scaleType="fitCenter" >
+                                    </com.example.drawernavigationtabs.NetworkImageView>
+
+                                    <com.example.drawernavigationtabs.NetworkImageView
+                                        android:id="@+id/friendPic3"
+                                        android:layout_width="@dimen/feed_item_fb_friends_pic"
+                                        android:layout_height="@dimen/feed_item_fb_friends_pic"
+                                        android:layout_gravity="bottom"
+                                        android:scaleType="fitCenter" >
+                                    </com.example.drawernavigationtabs.NetworkImageView>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/dealArray"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/friendPic1_url"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/friendPic2_url"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/friendPic3_url"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/feedImage_url"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/phone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/canonicalUrl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/suggestion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="5dp"
+                                    android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                                    android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/dealTag"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:alpha="0.5"
+        android:visibility="gone"
+        android:background="@drawable/deal"
+        android:paddingRight="@dimen/feed_item_padding_left_right" />
+
+</RelativeLayout>

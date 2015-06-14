@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/action_bar_deals_line"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:layout_marginLeft="@dimen/feed_item_padding_left_right"
+            android:layout_marginRight="@dimen/feed_item_padding_left_right"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_parent_rounded_corner_search"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="5dp"                        
+            android:textAlignment="center"
+            android:text=" What are you looking for ?"
+            android:textColor="@color/timestamp"
+             />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/feed_bg"
+        tools:context=".NewsTabbedFragment" >
+
+        <!--
+    This title strip will display the currently visible page title, as well as the page
+    titles for adjacent pages.#F2F2F2
+        -->
+
+        <android.support.v4.view.PagerTitleStrip
+            android:id="@+id/pager_title_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@color/action_bar_news_line"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textColor="@color/white" >
+        </android.support.v4.view.PagerTitleStrip>
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>
